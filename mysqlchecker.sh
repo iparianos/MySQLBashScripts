@@ -1,8 +1,10 @@
 #Created by iParianos @2017
 #This is a bash script for checking the status of mysql database server.
-#Create a cron job to run this script whenever you want, if script finds that your mysql db is down will try to restart it
-#for several times regarding the time in seconds that you declare on TIME_TO_RETRY. If retries are greater than the number of declared attempts to
-#send you an email then the system, zip the mysql log files encrypting them using the password below and send them on the declered email address.
+#Create a cron job to run this script whenever you want, if script find that your mysql db is down will try to restart it for 
+#several times regarding the time in seconds that you declared on TIME_TO_RETRY. If retries are greater than the number of 
+#declared attempts then it will send you an email, by zipping the mysql log files and encrypting them using the password that 
+#you have set up. You may declare the email address on the var EMAIL_AD. 
+#The script will do all this procedure on next cron cycle.
 #Please use it at your own risk.
 
 #!/bin/bash
