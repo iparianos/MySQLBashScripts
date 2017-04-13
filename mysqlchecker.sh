@@ -29,7 +29,7 @@ then
 	while [ "$(pgrep mysqld | wc -l)" -ne 1 ]
 	do 
 		echo "Trying to re-start MySQL server, attempt "$AUX" ..."
-		#sudo systemctl restart mysqld
+		sudo systemctl restart mysqld
 			if [ $AUX -eq $ATTEMPTS_TO_SEND_EMAIL ] 
 			then
 				rm -f $PATH_TO_SAVE_ZIP_LOGS/mysql_logs_*.zip
